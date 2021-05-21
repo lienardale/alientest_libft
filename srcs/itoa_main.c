@@ -6,7 +6,7 @@
 /*   By: alienard <alienard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 17:08:40 by alienard          #+#    #+#             */
-/*   Updated: 2021/01/11 13:42:48 by alienard         ###   ########.fr       */
+/*   Updated: 2021/05/21 11:55:48 by alienard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,49 +29,55 @@ void	ft_itoa_main(void)
 	int i5 = 2147483646;
 
 	size_t ok = 0;
-
-	if (strcmp(s0, ft_itoa(i0)))
+    char* ret;
+	if (strcmp(s0, ret = ft_itoa(i0)))
 	{
 		red();
 		printf("ft_itoa does not work with int min\n");
 		reset();
 		ok++;
-	}		
-	if (strcmp(s1, ft_itoa(i1)))
+	}
+    free(ret);
+	if (strcmp(s1, ret = ft_itoa(i1)))
 	{
 		red();
 		printf("ft_itoa does not work with int max\n");
 		reset();
 		ok++;
 	}		
-	if (strcmp(s2, ft_itoa(i2)))
+    free(ret);
+	if (strcmp(s2, ret = ft_itoa(i2)))
 	{
 		red();
 		printf("ft_itoa does not work with 0\n");
 		reset();
 		ok++;
 	}		
-	if (strcmp(s3, ft_itoa(i3)))
+    free(ret);
+	if (strcmp(s3, ret = ft_itoa(i3)))
 	{
 		red();
 		printf("ft_itoa does not work with 1\n");
 		reset();
 		ok++;
 	}		
-	if (strcmp(s4, ft_itoa(i4)))
+    free(ret);
+	if (strcmp(s4, ret = ft_itoa(i4)))
 	{
 		red();
 		printf("ft_itoa does notwork with int min + 1\n");
 		reset();
 		ok++;
 	}		
-	if (strcmp(s5, ft_itoa(i5)))
+    free(ret);
+	if (strcmp(s5, ret = ft_itoa(i5)))
 	{
 		red();
 		printf("ft_itoa does not work with int max - 1\n");
 		reset();
 		ok++;
 	}		
+    free(ret);
 	if (ok == 0)
 	{
 		green();
