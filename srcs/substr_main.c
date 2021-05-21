@@ -6,7 +6,7 @@
 /*   By: alienard <alienard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 16:47:15 by alienard          #+#    #+#             */
-/*   Updated: 2021/01/11 13:42:48 by alienard         ###   ########.fr       */
+/*   Updated: 2021/05/21 11:44:56 by alienard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s, 3, 0);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -36,6 +37,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s, 0, 3);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -44,6 +46,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s1, 3, 0);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -52,6 +55,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s1, 0, 3);
 	if (!(ft_strlen(tmp) == 1 && tmp[0] == 'q'))
 	{
@@ -60,6 +64,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s1, 40, 3);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -68,6 +73,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s1, 5, 50);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -76,6 +82,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s1, 5, 5);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -84,6 +91,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s1, ft_strlen((char*)s1)-1, ft_strlen((char*)s1));
 	if (!(ft_strlen(tmp) == 1 && tmp[0] == 'q'))
 	{
@@ -92,6 +100,8 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
+    /*
 	tmp = ft_substr(s1, 5, -5);
 	if (!(tmp == NULL))
 	{
@@ -100,6 +110,8 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
+    */
 	tmp = ft_substr(s2, 3, 0);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -108,6 +120,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s2, 0, 3);
 	if (!(ft_strlen(tmp) == 3 && tmp[0] == 'q' && tmp[1] == 'w' && tmp[2] == 'e'))
 	{
@@ -116,6 +129,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s2, 40, 3);
 	if (!(ft_strlen(tmp) == 0 && tmp[0] == 0))
 	{
@@ -124,6 +138,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s2, 5, 50);
 	if (!(ft_strlen(tmp) == 21 && tmp[0] == 'y' && tmp[20] == 'm'))
 	{
@@ -132,6 +147,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s2, 5, 5);
 	if (!(ft_strlen(tmp) == 5 && tmp[0] == 'y' && tmp[4] == 'p'))
 	{
@@ -140,6 +156,7 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
 	tmp = ft_substr(s2, ft_strlen((char*)s1)-1, ft_strlen((char*)s1));
 	if (!(ft_strlen(tmp) == 1 && tmp[0] == 'q'))
 	{
@@ -148,7 +165,9 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
-	tmp = ft_substr(s2, 5, -5);
+    free(tmp);
+	/*
+    tmp = ft_substr(s2, 5, -5);
 	if (!(tmp == NULL))
 	{
 		red();
@@ -156,6 +175,8 @@ void	ft_substr_main(void)
 		reset();
 		ok++;
 	}
+    free(tmp);
+    */
 	tmp = ft_substr(NULL, 5, 5);
 	if (!(tmp == NULL))
 	{
@@ -163,7 +184,9 @@ void	ft_substr_main(void)
 		printf("ft_substr not ok with test 18 : s = NULL, start = 5, len = 5\n");
 		reset();
 		ok++;
-	}	if (ok == 0)
+	}	
+    free(tmp);
+    if (ok == 0)
 	{
 		green();
 		printf("ft_substr ok\n");
