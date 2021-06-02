@@ -6,7 +6,7 @@
 /*   By: alienard <alienard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:43:30 by alienard          #+#    #+#             */
-/*   Updated: 2021/05/28 10:00:13 by alienard         ###   ########.fr       */
+/*   Updated: 2021/06/02 14:22:30 by alienard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,44 +63,12 @@ void	ft_strncmp_main(void)
 		}
 	}
 
-
-	// if(strncmp(s1, s1, strlen(s1)) == ft_strncmp(s1, s1, strlen(s1))
-	// && strncmp(s2, s2, strlen(s2)) == ft_strncmp(s2, s2, strlen(s2))
-	// && strncmp(s3, s3, strlen(s3)) == ft_strncmp(s3, s3, strlen(s3))
-	// && strncmp(s4, s4, strlen(s4)) == ft_strncmp(s4, s4, strlen(s4))
-	// && strncmp(s1, s2, n1) == ft_strncmp(s1, s2, n1)
-	// && strncmp(s1, s2, n2) == ft_strncmp(s1, s2, n2)
-	// && strncmp(s1, s2, n3) == ft_strncmp(s1, s2, n3)
-	// && strncmp(s1, s2, n4) == ft_strncmp(s1, s2, n4)
-	// && strncmp(s1, s3, n1) == ft_strncmp(s1, s3, n1)
-	// && strncmp(s1, s3, n2) == ft_strncmp(s1, s3, n2)
-	// && strncmp(s1, s3, n3) == ft_strncmp(s1, s3, n3)
-	// && strncmp(s1, s3, n4) == ft_strncmp(s1, s3, n4)
-	// && strncmp(s1, s4, n1) == ft_strncmp(s1, s4, n1)
-	// && strncmp(s1, s4, n2) == ft_strncmp(s1, s4, n2)
-	// && strncmp(s1, s4, n3) == ft_strncmp(s1, s4, n3)
-	// && strncmp(s1, s4, n4) == ft_strncmp(s1, s4, n4))
-	// {
 	if(!error){
 
 		green();
 		printf("ft_strncmp ok\n");
 		reset();
 	}
-
-	if(error){
-
-		red();
-		printf("DISCLAIMER : man indicates that this fct return pos, neg or 0, \n");
-		reset();
-	}
-	// }
-	// else
-	// {
-	// 	red();
-	// 	printf("ft_strncmp not ok\n");
-	// 	reset();
-	// }
 
 	//printf("%d\n", strncmp(NULL, s1, n4));
 	//printf("%d\n", ft_strncmp(NULL, s1, n4));

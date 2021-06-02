@@ -6,7 +6,7 @@
 /*   By: alienard <alienard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 19:10:51 by alienard          #+#    #+#             */
-/*   Updated: 2021/01/11 13:47:52 by alienard         ###   ########.fr       */
+/*   Updated: 2021/06/02 14:24:24 by alienard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(void)
 	ft_lstadd_back_main();
 	ft_lstadd_front_main();
 	ft_lstclear_main();
-	ft_lstdelone_main();
+	// ft_lstdelone_main();
 	ft_lstiter_main();
 	ft_lstlast_main();
 	ft_lstmap_main();
